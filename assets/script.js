@@ -13,23 +13,31 @@ const rotation = document.querySelector('.circle');
 var degree = 0;
 
 homebtn.addEventListener('click', () => {
-    scroller(degree);
-    degree+=90;
+    // scroller(degree);
+    // degree+=90;
+    rotation.style.transform = `rotate(-90deg)`;
+    educationcontent.scrollIntoView({behavior:"smooth"});
     return degree;
 });
 edubtn.addEventListener('click', () => {
-    scroller(degree);
-    degree+=90;
+    // scroller(degree);
+    // degree+=90;
+    rotation.style.transform = `rotate(-180deg)`;
+    workcontent.scrollIntoView({behavior: "smooth"});
     return degree;
 });
 workbtn.addEventListener('click',() => {
-    scroller(degree);
-    degree+=90;
+    // scroller(degree);
+    // degree+=90;
+    rotation.style.transform = `rotate(-270deg)`;
+    morecontent.scrollIntoView({behavior:"smooth"});
     return degree;
 });
 mbtn.addEventListener('click',() => {
-    scroller(degree);
-    degree=0;
+    // scroller(degree);
+    // degree=0;
+    rotation.style.transform = `rotate(0deg)`;
+    homecontent.scrollIntoView({behavior:"smooth"});
     return degree;
 });
 
@@ -37,17 +45,17 @@ function scroller(deg){
 
     switch(deg){
         case 0 : 
-            rotation.style.transform = `rotate(-${deg+90}deg)`;
+            rotation.style.transform = `rotate(-90deg)`;
             educationcontent.scrollIntoView({behavior:"smooth"});
             console.log(deg);
             break;
         case 90:
-            rotation.style.transform = `rotate(-${deg+90}deg)`;
+            rotation.style.transform = `rotate(-180deg)`;
             workcontent.scrollIntoView({behavior: "smooth"});
             console.log(deg);
             break;
         case 180:
-            rotation.style.transform = `rotate(-${deg+90}deg)`;
+            rotation.style.transform = `rotate(-270deg)`;
             morecontent.scrollIntoView({behavior:"smooth"});
             console.log(deg);
             break;
@@ -62,13 +70,6 @@ function scroller(deg){
     } 
      
 }
-
-
-
-//  0
-//  2019
-//  3938
-//  5857
 
 
 
@@ -90,3 +91,4 @@ $(window).on("scroll",function() {
     }
     console.log($(document).scrollTop());
   });
+
