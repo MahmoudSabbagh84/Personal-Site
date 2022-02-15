@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* General */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'Lato' , sans-serif;
+    color: #222;
+    overflow-x: hidden ;
+    margin: 0;
+}
+/* Container */
+
+.container{
+    background-color: #fafafa;
+    transform-origin: top left ;
+    width: 100vw;
+    min-height: 1%;
+    padding: 50px;
+}
+/* Circle navbar */
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    background-color: #222;
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform 0.6s linear;
+    
+
+}
+
+
+.circle button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: rgb(255, 7, 7);
+}
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button#home{
+    top: 110px;
+    left: 130px;
+}
+
+.circle button#education{
+    top:100px;
+    left:25px;
+    transform: rotate(90deg);
+}
+
+.circle button#workexp{
+    top: -10px;
+    left:30px;
+    transform: rotate(180deg);
+}
+.circle button#more{
+    top: 0px;
+    left: 140px;
+    transform: rotate(270deg);
+}
+
+/* Page container / content */
+
+.page-container{
+    background-color: aliceblue;
+    transform-origin: top left;
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-height: 80%;
+    padding-bottom: 50px;
+
+}
+
+.page-container div{
+    padding: 10px;
+    height: 100vw;
+    width: 80vw;
+}
+
+
