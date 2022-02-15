@@ -37,31 +37,23 @@ function scroller(deg){
 
     switch(deg){
         case 0 : 
-            if($(window).scrollTop() < 2019  || $(window).scrollTop() >= 3938){
-                rotation.style.transform = `rotate(-${deg+90}deg)`;
-                educationcontent.scrollIntoView({behavior:"smooth"});
-            }           
+            rotation.style.transform = `rotate(-${deg+90}deg)`;
+            educationcontent.scrollIntoView({behavior:"smooth"});
             console.log(deg);
-            break;        
+            break;
         case 90:
-            if($(window).scrollTop() < 3938 || $(window).scrollTop() >= 5857){
-                rotation.style.transform = `rotate(-${deg+90}deg)`;
-                workcontent.scrollIntoView({behavior: "smooth"});
-            }            
+            rotation.style.transform = `rotate(-${deg+90}deg)`;
+            workcontent.scrollIntoView({behavior: "smooth"});
             console.log(deg);
             break;
         case 180:
-            if($(window).scrollTop() < 5857){
-                rotation.style.transform = `rotate(-${deg+90}deg)`;
-                morecontent.scrollIntoView({behavior:"smooth"});
-            }           
+            rotation.style.transform = `rotate(-${deg+90}deg)`;
+            morecontent.scrollIntoView({behavior:"smooth"});
             console.log(deg);
             break;
         case 270:
-            if($(window).scrollTop() >= 2019){
-                rotation.style.transform = `rotate(0deg)`;
-                homecontent.scrollIntoView({behavior:"smooth"});
-            }
+            rotation.style.transform = `rotate(0deg)`;
+            homecontent.scrollIntoView({behavior:"smooth"});
             console.log(deg);
             break;
         default:
